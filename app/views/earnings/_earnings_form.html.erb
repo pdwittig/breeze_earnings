@@ -1,22 +1,72 @@
-<h1>Earnings Form</h1>
-<%= form_tag("/earnings", method: "get") do %>
-  <%= label_tag("Insurance Cost") %>
-  <%= number_field(:earnings, :insurance_cost, in: 1..50, step: 1) %>
+<%= form_tag("/earnings", method: "get", remote: :true, id: "earnings-form" ) do %>
+<div class="row form-row">
+  <div class="col-md-4">
+    <div class="field-container">
+      <div class="row"> 
+        <%= label_tag("Insurance Cost" ) %>
+      </div>
+      <div class="row">
+        <%= number_field(:earnings, :insurance_cost, in: 1..50, step: 1, class: "field") %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="field-container">
+      <div class="row"> 
+        <%= label_tag("Mobile Plan Cost") %>
+      </div>
+      <div class="row">
+        <%= number_field(:earnings, :mobile_plan_cost, in: 1..50, step: 1, class: "field") %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="field-container">
+      <div class="row"> 
+        <%= label_tag("Fuel Cost / gallon ") %>
 
-  <%= label_tag("Mobile Plan Cost") %>
-  <%= number_field(:earnings, :mobile_plan_cost, in: 1..50, step: 1) %>
+      </div>
+      <div class="row">
+        <%= number_field(:earnings, :fuel_cost, in: 1..10, step: 1, class: "field") %>  
 
-  <%= label_tag("Fuel Cost / gallon ") %>
-  <%= number_field(:earnings, :fuel_cost, in: 1..10, step: 1) %>  
+      </div>
+    </div>
+  </div>
+</div>
 
-  <%= label_tag("Commute Distance") %>
-  <%= number_field(:earnings, :commute_distance, in: 1..100, step: 1) %>
-  
-  <%= label_tag("Days Per Week") %>
-  <%= number_field(:earnings, :days_per_week, in: 1..7, step: 1) %>
-
-  <%= label_tag("Hours Per Week") %>
-  <%= number_field(:earnings, :hours_per_week, in: 1..60, step: 1) %>
-
-  <%= submit_tag("Estimate Earnings") %>    
+<div class="row form-row">
+  <div class="col-md-4">
+    <div class="field-container">
+      <div class="row"> 
+        <%= label_tag("Commute Distance") %>
+      </div>
+      <div class="row">
+        <%= number_field(:earnings, :commute_distance, in: 1..100, step: 1, class: "field") %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="field-container">
+      <div class="row"> 
+        <%= label_tag("Days Per Week") %>
+      </div>
+      <div class="row">
+        <%= number_field(:earnings, :days_per_week, in: 1..7, step: 1, class: "field") %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="field-container">
+      <div class="row"> 
+        <%= label_tag("Hours Per Week") %>
+      </div>
+      <div class="row">
+        <%= number_field(:earnings, :hours_per_week, in: 1..60, step: 1, class: "field") %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="btn-container">
+  <%= submit_tag("Estimate Earnings", class: "btn btn-default") %> 
+</div>
 <% end %>
