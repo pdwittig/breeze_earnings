@@ -5,8 +5,7 @@ class EarningsController < ApplicationController
   end
 
   def calculate
-    p params['earnings']
-    earnings_estimator = EarningsEstimator.new(params[:estimate])
+    earnings_estimator = EarningsEstimator.new(params[:earnings])
     render json: earnings_estimator.calculate_earnings_estimate
   end
 
