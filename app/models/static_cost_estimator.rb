@@ -1,9 +1,10 @@
 class StaticCostEstimator
 
-  def calculate(earnings_estimator)
-    static_costs = [earnings_estimator.leasing_cost,
-                    earnings_estimator.insurance_cost,
-                    earnings_estimator.mobile_plan_cost]
+  def calculate(sender)
+    static_costs = [sender.leasing_cost,
+                    sender.insurance_cost,
+                    sender.mobile_plan_cost]
+
     static_costs.reduce(:+)
   end
 

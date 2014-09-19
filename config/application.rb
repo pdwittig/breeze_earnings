@@ -11,6 +11,9 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# Load deafult earnings calc vars
+ENV.update YAML.load_file('config/application.yml')[Rails.env]
+
 module BreezeEarnings
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

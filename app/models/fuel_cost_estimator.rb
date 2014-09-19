@@ -1,20 +1,16 @@
 class FuelCostEstimator
 
-  def initialize
-    @avg_miles_hour = 12
-    @miles_per_gallon = 50.0
-  end
-
-  def calculate(earnings_estimator)
-    commute_cost(earnings_estimator) + on_the_clock_cost(earnings_estimator)
+  def calculate(sender)
+    commute_cost(sender) + on_the_clock_cost(sender)
   end
 
   private
-  def commute_cost(earnings_estimator)
-    earnings_estimator.days_per_week * earnings_estimator.commute_distance * 2 / @miles_per_gallon * earnings_estimator.fuel_cost
+  def commute_cost(sender)
+    sender.days_per_week * sender.commute_distance * 2 / sender.miles_per_gallon * sender.fuel_cost
   end
 
-  def on_the_clock_cost(earnings_estimator)
-    earnings_estimator.hours_per_week * @avg_miles_hour / @miles_per_gallon * earnings_estimator.fuel_cost
+  def on_the_clock_cost(sender)
+    sender.hours_per_week * sender.miles_per_hour / sender.miles_per_gallon * sender.fuel_cost
   end
+
 end
