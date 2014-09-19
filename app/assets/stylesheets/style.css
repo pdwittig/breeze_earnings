@@ -1,0 +1,98 @@
+body {
+  background-color: #ECF0F1;
+}
+
+a, p, h1, h2, h3, h4, label {
+  font-family: 'Lato', sans-serif;
+}
+
+.main-container {
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-top: 100px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.field-container {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.field {
+  width: 100%;
+}
+
+.header {
+  background-color: #2C3E50;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.header h2 {
+  margin-top: 0px;
+  padding: 10px; 
+  color: #ECF0F1;
+  text-align: center;
+}
+
+.form-row {
+  margin-top: 1%;
+  /*margin-bottom: 2%;*/
+}
+
+input {
+  border: none;
+  background-color: #ECF0F1; 
+}
+
+label {
+  color: #7F8C8D;
+}
+
+.divider {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 2px solid #ECF0F1; 
+}
+
+/*.earnings-output {
+
+}*/
+
+.earnings-output h1 {
+  font-size: 4em;
+  /*font-style: */
+  width: 35%;
+  margin: 30px auto;
+  margin-bottom: 10px;
+  color: #1DC28D;
+  font-weight: bold;
+}
+
+.earnings-output p {
+  font-size: 1.2em;
+  color: #95A5A6;
+  width: 33%;
+  margin: 10px auto;
+}
+
+.btn-container {
+  width: 87%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.btn {
+  width: 100%;
+  background-color: #1DC28D;
+  border: none;
+  border-radius: 1px;
+  color: #ECF0F1;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #1DC28D;
+  border: none;
+}

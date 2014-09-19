@@ -1,7 +1,7 @@
 EarningsEstimator.View = function() {
   this.eventDelegate = {}
   this.formSelector = '#earnings-form'
-  this.earningsEstimateSelector = '#earnings-estimate'
+  this.earningsEstimateSelector = '.earnings-output h1'
 }
 
 EarningsEstimator.View.prototype = {
@@ -16,6 +16,6 @@ EarningsEstimator.View.prototype = {
   },
 
   update: function(data) {
-    $(this.earningsEstimateSelector).empty().html("Estimate: " + data);
+    $(this.earningsEstimateSelector).empty().html("$" + data);
   }
 }
