@@ -6,7 +6,7 @@
         <%= label_tag("Insurance Cost" ) %>
       </div>
       <div class="row">
-        <%= number_field(:earnings, :insurance_cost, in: 1..50, step: 1, class: "field") %>
+        <%= number_field(:earnings, :insurance_cost, in: 1..100, step: 1, class: "field") %>
       </div>
     </div>
   </div>
@@ -16,7 +16,7 @@
         <%= label_tag("Mobile Plan Cost") %>
       </div>
       <div class="row">
-        <%= number_field(:earnings, :mobile_plan_cost, in: 1..50, step: 1, class: "field") %>
+        <%= number_field(:earnings, :mobile_plan_cost, in: 1..100, step: 1, class: "field") %>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@
 
       </div>
       <div class="row">
-        <%= number_field(:earnings, :fuel_cost, in: 1..10, step: 1, class: "field") %>  
+        <%= number_field(:earnings, :fuel_cost, in: 1..100, step: 1, class: "field") %>  
 
       </div>
     </div>
@@ -61,7 +61,7 @@
         <%= label_tag("Hours Per Week") %>
       </div>
       <div class="row">
-        <%= number_field(:earnings, :hours_per_week, in: 1..60, step: 1, class: "field") %>
+        <%= number_field(:earnings, :hours_per_week, in: 1..100, step: 1, class: "field") %>
       </div>
     </div>
   </div>

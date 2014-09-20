@@ -3,16 +3,19 @@
     <div class="row">
       <div class= "col-md-12">
         <div class="header">
-          <h2>Breeze Earnings Estimator</h2>
+          <h2>Breeze Earnings Calculator</h2>
         </div>
         <%= render "earnings_form" %>
         <div class="divider"> </div>
-        <div class="row">
-          <div class="col-md-6 earnings-output">
+        <div class="row output-container">
+          <div class="col-md-6 left earnings-output-week earnings-output">
             <h1>$ 0</h1>
-            <p>Earnings Per Week</p>
+            <p>Per Week</p>
           </div>
-          <div class="col-md-6"></div>
+          <div class="col-md-6 earnings-output-hour earnings-output">
+            <h1>$ 0</h1>
+            <p>Per Hour</p>
+          </div>
         </div>
       </div>
     </div>

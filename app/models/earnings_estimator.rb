@@ -2,7 +2,7 @@ class EarningsEstimator
 
   attr_reader :leasing_cost, :insurance_cost, :mobile_plan_cost, 
               :fuel_cost, :commute_distance, :days_per_week, :hours_per_week,
-              :miles_per_gallon, :earnings_per_hour, :miles_per_hour
+              :miles_per_gallon, :wage_per_hour, :miles_per_hour
 
   def initialize(args)
     @calc_strategies = ["StaticCostEstimator", "FuelCostEstimator", "IncomeEstimator"]
@@ -12,9 +12,10 @@ class EarningsEstimator
   end
 
   def calculate_earnings_estimate
-    net_earnings = 0
-    @tasks.each { |task| net_earnings += task.calculate(self) }
-    return net_earnings
+    earnings_per_week = 0
+    @tasks.each { |task| earnings_per_week += task.calculate(self) }
+    earnings_per_hour = earnings_per_week / @hours_per_week
+    return { earnings_per_week: earnings_per_week, earnings_per_hour: earnings_per_hour }
   end
 
   private
@@ -26,7 +27,7 @@ class EarningsEstimator
     #load from environment
     @miles_per_hour = ENV['miles_per_hour'].to_i
     @miles_per_gallon = ENV['miles_per_gallon'].to_f
-    @earnings_per_hour = ENV['earnings_per_hour'].to_i
+    @wage_per_hour = ENV['wage_per_hour'].to_i
     @leasing_cost = normalize_to_negative(ENV['leasing_cost'])
 
     #load from args

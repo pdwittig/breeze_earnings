@@ -2,7 +2,7 @@ defaults: &defaults
   leasing_cost: '160'
   miles_per_hour: '12'
   miles_per_gallon: '50'
-  earnings_per_hour: '25'
+  wage_per_hour: '25'
 
 development:
   <<: *defaults

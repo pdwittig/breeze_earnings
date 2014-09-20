@@ -1,7 +1,8 @@
 EarningsEstimator.View = function() {
   this.eventDelegate = {}
   this.formSelector = '#earnings-form'
-  this.earningsEstimateSelector = '.earnings-output h1'
+  this.earningsPerWeekSelector = '.earnings-output-week h1'
+  this.earningsPerHourSelector = '.earnings-output-hour h1'
 }
 
 EarningsEstimator.View.prototype = {
@@ -16,6 +17,9 @@ EarningsEstimator.View.prototype = {
   },
 
   update: function(data) {
-    $(this.earningsEstimateSelector).empty().html("$" + data);
+    if (data.earnings_per_week && data.earnings_per_hour) {
+      $(this.earningsPerWeekSelector).empty().html("$" + data.earnings_per_week.toFixed(2));
+      $(this.earningsPerHourSelector).empty().html("$" + data.earnings_per_hour.toFixed(2));
+    }
   }
 }
