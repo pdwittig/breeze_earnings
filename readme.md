@@ -10,4 +10,4 @@ Get accurate insights into how much money you can make from Uber and Lyft when y
  - Mobile data plan costs
  - Distance from hot area (commute)
  - Gas price (mpg)
- - Have ideas for addional metrics?  Let me know!
+ - Have ideas for additional metrics?  Let me know!
