@@ -1,5 +1,5 @@
 #Breeze Earnings Calculator
-Get accurate insights into how much money you can make from Uber and Lyft when you lease a car from Breeze!
+Get accurate insights into how much money you can make from Uber and Lyft when you lease a car with Breeze!
 
 [Check out it out live!](http://breezeearnings.herokuapp.com) 
 
